@@ -1,0 +1,68 @@
+{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "2.8.3",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.0",
+    "vite-tsconfig-paths": "^4.0.5"
+  },
+  "description": "The package where lives the frontend project.",
+  "keywords": [
+    "Commitlint",
+    "Eslint",
+    "Husky",
+    "Lint staged",
+    "Material UI",
+    "Prettier",
+    "React router",
+    "React toolkit",
+    "React",
+    "Styled components",
+    "Typescript",
+    "Vite"
+  ],
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint"
+    ],
+    "*.{ts,tsx,css,scss}": [
+      "prettier --write"
+    ]
+  },
+  "name": "frontend",
+  "private": true,
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "format": "prettier --write ./src",
+    "lint": "eslint --ext .ts,.tsx src",
+    "lint:fix": "eslint --fix --ext .ts,.tsx src",
+    "prepare": "husky install",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}
